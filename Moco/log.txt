@@ -1,0 +1,3 @@
+24 ÁùÔÂ 2016 17:04:40 [main] INFO  Unrecognized field: Unrecognized field "url" (class com.github.dreamhead.moco.parser.model.MountSetting), not marked as ignorable (16 known properties: "attachment", "headers", "json", "factory", "includes", "uri", "text", "proxy", "cookies", "status", "version", "excludes", "file", "latency", "path_resource", "dir"])
+ at [Source: java.io.FileInputStream@55a561cf; line: 148, column: 14] (through reference chain: java.util.ArrayList[11]->com.github.dreamhead.moco.parser.model.SessionSetting["mount"]->com.github.dreamhead.moco.parser.model.MountSetting["url"])
+24 ÁùÔÂ 2016 17:04:40 [main] ERROR Unrecognized field [ url ], please check!

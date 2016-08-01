@@ -1,0 +1,145 @@
+[
+  {
+    "request": {
+      "uri": "/test"
+    },
+    "response": {
+      "status": 200,
+      "text": "{\"result\":\"success\"}"
+    }
+  },
+  {
+    "description": "若请求body中内容是【request content】，则返回【{\"result\":\"success\"}】",
+    "request": {
+      "uri": "/response_by_content",
+      "text": "request content"
+    },
+    "response": {
+      "status": 200,
+      "text": "{\"result\":\"success\"}"
+    }
+  },
+  {
+    "description": "若请求body中内容与文件【d://content.txt】相同，则返回【{\"result\":\"success\"}】",
+    "request": {
+      "uri": "/response_by_content",
+      "file": "d://content.txt"
+    },
+    "response": {
+      "status": 200,
+      "text": "{\"result\":\"success\"}"
+    }
+  },
+  {
+    "description": "若请求参数中包含user=root，则返回【{\"result\":\"success\"}】",
+    "request": {
+      "uri": "/response_by_queries",
+      "queries": {
+        "user": "root",
+        "pwd": "pwd"
+      }
+    },
+    "response": {
+      "status": 200,
+      "text": "{\"result\":\"success\"}"
+    }
+  },
+  {
+    "description": "若请求方法是get，则返回【{\"result\":\"success\"}】",
+    "request": {
+      "uri": "/response_by_method",
+      "method": "get"
+    },
+    "response": {
+      "status": 200,
+      "text": "{\"result\":\"success\"}"
+    }
+  },
+  {
+    "description": "若请求header中包含header_key-header_value，则返回【{\"result\":\"success\"}】",
+    "request": {
+      "uri": "/response_by_header",
+      "headers": {
+        "header_key": "header_value"
+      }
+    },
+    "response": {
+      "status": 200,
+      "text": "{\"result\":\"success\"}"
+    }
+  },
+  {
+    "description": "若请求cookies中包含login-true，则返回【{\"result\":\"success\"}】",
+    "request": {
+      "uri": "/response_by_cookies",
+      "cookies": {
+        "login": "true"
+      }
+    },
+    "response": {
+      "status": 200,
+      "text": "{\"result\":\"success\"}"
+    }
+  },
+  {
+    "description": "若请求表单中包含name-foo(注意，若是post方法，则Content-Type需是application/x-www-form-urlencoded)，则返回【{\"result\":\"success\"}】",
+    "request": {
+      "uri": "/response_by_form",
+      "forms": {
+        "name": "foo"
+      }
+    },
+    "response": {
+      "status": 200,
+      "text": "{\"result\":\"success\"}",
+      "headers": {
+        "content-type": "application/json"
+      }
+    }
+  },
+  {
+    "description": "返回图片98bc4f17.gif",
+    "request": {
+      "uri": "/return_file"
+    },
+    "response": {
+      "status": 200,
+      "file": "d://98bc4f17.gif"
+    }
+  },
+  {
+    "request": {
+      "uri": "/test_all",
+      "method": "post",
+      "headers": {
+        "header1": "header1"
+      },
+      "queries": {
+        "param": "test"
+      },
+      "forms": {
+        "name": "foo"
+      }
+    },
+    "response": {
+      "status": 200,
+      "text": "{\"result\":\"success\"}",
+      "headers": {
+        "content-type": "application/json"
+      }
+    }
+  },
+  {
+    "request": {
+      "uri": "/login",
+      "queries": {
+        "user_name": "root",
+        "password": "admin"
+      }
+    },
+    "response": {
+      "status": 200,
+      "text": "{\"status\":\"success\"}"
+    }
+  }
+]
