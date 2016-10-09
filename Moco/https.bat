@@ -1,1 +1,1 @@
-java -jar moco-runner-0.11.0-standalone.jar https -p 12346 -c MocoApi.json --https test.cer --cert mocohttps --keystore mocohttps
+java -jar moco-runner-0.11.0-standalone.jar https -p 12346 -c MocoApi.json --https server.jks --cert 123456 --keystore 123456
